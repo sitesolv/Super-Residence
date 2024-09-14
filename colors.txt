@@ -1,0 +1,2 @@
+main color : #150035
+secondary color : #524e6d
