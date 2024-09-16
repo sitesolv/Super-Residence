@@ -162,7 +162,9 @@
                             <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
                             <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Enjoy the world of relaxation</h4>
                             <h3 data-caption-animate="slideInLeft" data-caption-delay="800">and tranquility!</h3>
-                          </div><a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
+                          </div>
+                          <!-- Button with higher z-index to remain clickable -->
+                          <a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
                         </div>
                       </div>
                     </div>
@@ -174,7 +176,9 @@
                             <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
                             <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Experience the luxurious level</h4>
                             <h3 data-caption-animate="slideInLeft" data-caption-delay="800">of our Serene Pool</h3>
-                          </div><a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
+                          </div>
+                          <!-- Button remains clickable -->
+                          <a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
                         </div>
                       </div>
                     </div>
@@ -182,16 +186,30 @@
                       <div class="swiper-slide-caption">
                         <div class="shell text-sm-left">
                           <h1 data-caption-animate="slideInDown" data-caption-delay="100">Find Your Perfect Escape</h1>
-                          <div class="slider-subtitle-group"> 
+                          <div class="slider-subtitle-group">
                             <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
                             <h3 data-caption-animate="slideInLeft" data-caption-delay="800">Unwind in Quiet Elegance</h3>
-                          </div><a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
+                          </div>
+                          <!-- Button remains clickable -->
+                          <a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>
+                
+                <style>
+                  .swiper-container {
+                    pointer-events: none; /* Disables interaction on the swiper */
+                  }
+                
+                  .button {
+                    pointer-events: auto; /* Re-enables interaction for buttons */
+                    z-index: 10; /* Ensures the button appears on top */
+                  }
+                </style>
+                
               </section>
             </div>
             <div class="cell-lg-4 cell-xl-3 reveal-lg-flex">
