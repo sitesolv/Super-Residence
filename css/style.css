@@ -31741,3 +31741,20 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	padding: 0 20px;
 	border: 1px solid #150035;
 }
+
+iframe {
+    display: block; /* To center using margin */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Max width for large screens */
+    height: 500px; /* Fixed height for desktop */
+    margin: 0 auto; /* Center the iframe */
+    border: none;
+}
+
+@media (max-width: 768px) {
+    iframe {
+        width: 90%; /* Take up 90% width of the viewport on smaller screens */
+        height: 300px; /* Set a fixed height for smaller devices */
+        padding-bottom: 0;
+    }
+}
