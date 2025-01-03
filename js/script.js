@@ -1695,3 +1695,16 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(video);
 
 
+/**----------------------
+       scroll up
+       ----------------------*/
+    // Scroll to top when button is clicked
+    document.getElementById("scrollUpBtn").onclick = function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+    document.getElementById("scrollUpBtn").onclick = function() {
+        // If the user clicks "OK", open WhatsApp
+        window.location.href = "whatsapp://send?phone=94771919523";
+    };
+
+
