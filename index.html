@@ -1,393 +1,856 @@
-
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
-  <head>
-    <!-- Site Title-->
-    <title>Home - Best Villa in Sri Lanka</title>
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic%7CPoppins:300,400,500,700">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
-    <style>
-      /* Basic styling */
-      body {
-        font-family: Arial, sans-serif;
+
+<head>
+  <!-- Site Title-->
+  <title>Home - Best Villa in Sri Lanka</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Stylesheets-->
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Lato:400,700,400italic%7CPoppins:300,400,500,700">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .ie-panel {
+      display: none;
+      background: #212121;
+      padding: 10px 0;
+      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+      clear: both;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    html.ie-10 .ie-panel,
+    html.lt-ie-10 .ie-panel {
+      display: block;
+    }
+  </style>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Ensure the video doesn't overlap in mobile view */
+    .range-50 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .cell-sm-10 {
+      width: 100%;
+    }
+
+    .cell-md-8,
+    .cell-lg-7,
+    .cell-lg-5 {
+      width: 100%;
+    }
+
+    .post-video {
+      margin-bottom: 30px;
+    }
+
+    /* Media queries for mobile */
+    @media (min-width: 768px) {
+      .cell-md-8 {
+        width: 66.6667%;
+        /* 2/3 width on medium screens */
       }
 
-      video {
-        width: 100%;
-        height: auto;
+      .cell-lg-7 {
+        width: 58.3333%;
+        /* Slightly narrower on large screens */
       }
 
-      /* Ensure the video doesn't overlap in mobile view */
+      .cell-lg-5 {
+        width: 41.6667%;
+        /* Slightly narrower on large screens */
+      }
+
       .range-50 {
-        display: flex;
-        flex-wrap: wrap;
+        justify-content: space-between;
       }
+    }
 
-      .cell-sm-10 {
-        width: 100%;
-      }
+    @media (min-width: 992px) {
 
       .cell-md-8,
       .cell-lg-7,
       .cell-lg-5 {
-        width: 100%;
+        width: auto;
+      }
+    }
+
+    /* Restaurant & Dining Section Styles */
+    .restaurant-content-box {
+      padding-right: 15px;
+    }
+
+    .restaurant-pill-badge {
+      display: inline-block;
+      background: rgba(21, 0, 53, 0.08);
+      color: #150035;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 5px 15px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .restaurant-lead {
+      font-size: 17px;
+      line-height: 1.5;
+      color: #524e6d;
+      margin-top: 8px;
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+
+    .restaurant-highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 22px 0 26px;
+    }
+
+    @media (max-width: 540px) {
+      .restaurant-highlights-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .restaurant-highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .restaurant-highlight-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      background: rgba(21, 0, 53, 0.07);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #150035;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .restaurant-highlight-body h6 {
+      margin: 0 0 3px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #150035;
+    }
+
+    .restaurant-highlight-body p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #666;
+    }
+
+    .restaurant-cta-wrap {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .restaurant-cta-wrap .button {
+      margin: 0;
+    }
+
+    /* 5-Image Mosaic Gallery */
+    .restaurant-mosaic-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 155px;
+      gap: 14px;
+    }
+
+    .restaurant-mosaic-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(21, 0, 53, 0.09);
+      background: #eee;
+    }
+
+    .restaurant-mosaic-item.item-hero {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .restaurant-mosaic-item.item-tall {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+
+    .restaurant-mosaic-item.item-small {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+
+    .restaurant-mosaic-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .restaurant-mosaic-link figure {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .restaurant-mosaic-link img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .restaurant-mosaic-link:hover figure {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    .restaurant-mosaic-link .caption {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(143, 133, 158, 0.42);
+      opacity: 0;
+      transition: opacity 0.35s ease-in-out;
+      pointer-events: none;
+    }
+
+    .restaurant-mosaic-link .caption::before,
+    .restaurant-mosaic-link .caption::after {
+      pointer-events: none;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      bottom: 16px;
+      left: 16px;
+      content: '';
+      opacity: 0;
+      transition: opacity 0.35s, transform 0.35s;
+      will-change: opacity, transform;
+    }
+
+    .restaurant-mosaic-link .caption::before {
+      border-top: 1px solid rgba(255, 255, 255, 0.45);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+      transform: scale(0, 1);
+    }
+
+    .restaurant-mosaic-link .caption::after {
+      border-right: 1px solid rgba(255, 255, 255, 0.45);
+      border-left: 1px solid rgba(255, 255, 255, 0.45);
+      transform: scale(1, 0);
+    }
+
+    .restaurant-mosaic-link:hover .caption {
+      opacity: 1;
+    }
+
+    .restaurant-mosaic-link:hover .caption::before,
+    .restaurant-mosaic-link:hover .caption::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .restaurant-more-badge {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(21, 0, 53, 0.82);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      z-index: 1;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .restaurant-mosaic-link:hover .restaurant-more-badge {
+      opacity: 0;
+    }
+
+    @media (max-width: 767px) {
+      .restaurant-mosaic-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 140px;
       }
 
-      .post-video {
-        margin-bottom: 30px;
+      .restaurant-mosaic-item.item-hero {
+        grid-column: span 2;
+        grid-row: span 2;
       }
 
-      /* Media queries for mobile */
-      @media (min-width: 768px) {
-        .cell-md-8 {
-          width: 66.6667%; /* 2/3 width on medium screens */
-        }
-
-        .cell-lg-7 {
-          width: 58.3333%; /* Slightly narrower on large screens */
-        }
-
-        .cell-lg-5 {
-          width: 41.6667%; /* Slightly narrower on large screens */
-        }
-
-        .range-50 {
-          justify-content: space-between;
-        }
+      .restaurant-mosaic-item.item-tall {
+        grid-column: span 1;
+        grid-row: span 1;
       }
 
-      @media (min-width: 992px) {
-        .cell-md-8,
-        .cell-lg-7,
-        .cell-lg-5 {
-          width: auto;
-        }
+      .restaurant-mosaic-item.item-small {
+        grid-column: span 1;
+        grid-row: span 1;
       }
-    </style>
-  </head>
-  <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <!-- Page-->
-      <!-- Page preloader-->
-      
-      <!-- Page Header-->
-      <header class="page-header" style="padding-bottom: 24px">
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-default-with-top-panel" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fullwidth" data-lg-device-layout="rd-navbar-fullwidth" data-md-stick-up-offset="90px" data-lg-stick-up-offset="150px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
-            <div class="rd-navbar-top-panel rd-navbar-collapse">
-              <div class="rd-navbar-top-panel-inner">
-                <div class="left-side">
-                  <div class="group"><span class="text-italic">Follow Us:</span>
-                    <ul class="list-inline">
-                      <li><a class="icon icon-sm icon-secondary-5 fa fa-instagram" href="#"></a></li>
-                      <li><a class="icon icon-sm icon-secondary-5 fa fa-facebook" href="#"></a></li>
-                      <li><a class="icon icon-sm icon-secondary-5 fa fa-twitter" href="#"></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="center-side">
-                  <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand fullwidth-brand"><a class="brand-name" href="index.html"><img src="images/logo-default-314x48.png" alt="" width="314" height="48"/></a></div>
-                </div>
-                <div class="right-side">
-                  <!-- Contact Info-->
-                  <div class="contact-info">
-                    <div class="unit unit-middle unit-horizontal unit-spacing-xs">
-                      <div class="unit__left"><span class="icon icon-primary text-middle mdi mdi-phone"></span></div>
-                      <div class="unit__body"><a class="text-middle" href="tel:#">+94 77 191 9523</a></div>
-                    </div>
-                  </div>
-                </div>
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
+        src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
+        alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
+  </div>
+  <!-- Page-->
+  <!-- Page preloader-->
+
+  <!-- Page Header-->
+  <header class="page-header" style="padding-bottom: 24px">
+    <!-- RD Navbar-->
+    <div class="rd-navbar-wrap">
+      <nav class="rd-navbar rd-navbar-default-with-top-panel" data-layout="rd-navbar-fixed"
+        data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-md-device-layout="rd-navbar-fixed"
+        data-lg-layout="rd-navbar-fullwidth" data-lg-device-layout="rd-navbar-fullwidth" data-md-stick-up-offset="90px"
+        data-lg-stick-up-offset="150px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true"
+        data-lg-stick-up="true">
+        <div class="rd-navbar-top-panel rd-navbar-collapse">
+          <div class="rd-navbar-top-panel-inner">
+            <div class="left-side">
+              <div class="group"><span class="text-italic">Follow Us:</span>
+                <ul class="list-inline">
+                  <li><a class="icon icon-sm icon-secondary-5 fa fa-instagram" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-secondary-5 fa fa-facebook" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-secondary-5 fa fa-twitter" href="#"></a></li>
+                </ul>
               </div>
             </div>
-            <div class="rd-navbar-inner">
-              <!-- RD Navbar Panel-->
-              <div class="rd-navbar-panel">
-                <!-- RD Navbar Toggle-->
-                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                <!-- RD Navbar collapse toggle-->
-                <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></button>
-                <!-- RD Navbar Brand-->
-                <div class="rd-navbar-brand mobile-brand"><a class="brand-name" href="index.html"><img src="images/logo-default-314x48.png" alt="" width="314" height="48"/></a></div>
-              </div>
-              <div class="rd-navbar-aside-right">
-                <div class="rd-navbar-nav-wrap">
-                  <div class="rd-navbar-nav-scroll-holder">
-                    <ul class="rd-navbar-nav">
-                      <li class="active"><a href="index.html">Home</a>
-                      </li>
-                      <li><a href="about-us.html">About Us</a>
-                      </li>
-                      <li><a href="gallery.html">Gallery</a>
-                      </li>
-                      <li><a href="rooms.html">Rooms</a>
-                      </li>
-                      <li><a href="contacts.html">Contacts</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+            <div class="center-side">
+              <!-- RD Navbar Brand-->
+              <div class="rd-navbar-brand fullwidth-brand"><a class="brand-name" href="index.html"><img
+                    src="images/logo-default-314x48.png" alt="" width="314" height="48" /></a></div>
             </div>
-          </nav>
-        </div>
-      </header>
-      <section class="section">
-        <div class="shell-wide">
-          <div class="range range-30 range-xs-center">
-            <div class="cell-lg-8 cell-xl-9">
-              <!-- Classic slider-->
-              <section class="section">
-                <!-- Swiper -->
-                <div class="swiper-container swiper-slider swiper-style-2" data-loop="false" data-autoplay="5500" data-simulate-touch="false" data-slide-effect="slide" data-direction="vertical">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide" data-slide-bg="images/slide-01.jpg">
-                      <div class="swiper-slide-caption">
-                        <div class="shell text-sm-left">
-                          <h1 data-caption-animate="slideInDown" data-caption-delay="100">Your Ideal Retreat</h1>
-                          <div class="slider-subtitle-group">
-                            <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
-                            <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Enjoy the world of relaxation</h4>
-                            <h3 data-caption-animate="slideInLeft" data-caption-delay="800">and tranquility!</h3>
-                          </div>
-                          <!-- Button with higher z-index to remain clickable -->
-                          <a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide" data-slide-bg="images/slide-02.jpg">
-                      <div class="swiper-slide-caption">
-                        <div class="shell text-sm-left">
-                          <h1 data-caption-animate="slideInDown" data-caption-delay="100">Relax & Unwind by Our Serene Pool</h1>
-                          <div class="slider-subtitle-group">
-                            <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
-                            <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Experience the luxurious level</h4>
-                            <h3 data-caption-animate="slideInLeft" data-caption-delay="800">of our Serene Pool</h3>
-                          </div>
-                          <!-- Button remains clickable -->
-                          <a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide" data-slide-bg="images/slide-03.jpg">
-                      <div class="swiper-slide-caption">
-                        <div class="shell text-sm-left">
-                          <h1 data-caption-animate="slideInDown" data-caption-delay="100">Find Your Perfect Escape</h1>
-                          <div class="slider-subtitle-group">
-                            <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
-                            <h3 data-caption-animate="slideInLeft" data-caption-delay="800">Unwind in Quiet Elegance</h3>
-                          </div>
-                          <!-- Button remains clickable -->
-                          <a class="button button-effect-ujarak button-lg button-white-outline button-square" href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-pagination"></div>
+            <div class="right-side">
+              <!-- Contact Info-->
+              <div class="contact-info">
+                <div class="unit unit-middle unit-horizontal unit-spacing-xs">
+                  <div class="unit__left"><span class="icon icon-primary text-middle mdi mdi-phone"></span></div>
+                  <div class="unit__body"><a class="text-middle" href="tel:#">+94 77 191 9523</a></div>
                 </div>
-                
-                <style>
-                  .swiper-container {
-                    pointer-events: none; /* Disables interaction on the swiper */
-                  }
-                
-                  .button {
-                    pointer-events: auto; /* Re-enables interaction for buttons */
-                    z-index: 10; /* Ensures the button appears on top */
-                  }
-                </style>
-                
-              </section>
-            </div>
-            <div class="cell-lg-4 cell-xl-3 reveal-lg-flex">
-              <div class="hotel-booking-form">
-                <h3>Book a Room</h3>
-                <!-- RD Mailform-->
-                <form id="myForm" action="https://api.web3forms.com/submit" method="POST">
-                  <!-- Replace with your Access Key -->
-                  <input type="hidden" name="access_key" value="5c6c3da9-0732-48ee-800f-674a5587259f">
-                  
-                  <div class="range range-sm-bottom spacing-20">
-                    <div class="cell-lg-12 cell-md-4">
-                      <p class="text-uppercase">Your Name</p>
-                      <div class="form-wrap">
-                        <input class="form-input" id="contact-first-name" type="text" name="name" data-constraints="@Required" required>
-                        <label class="form-label" for="contact-first-name">Your Full Name</label>
-                      </div>
-                    </div>
-                    <div class="cell-lg-12 cell-md-4 cell-sm-6">
-                      <p class="text-uppercase">Arrival</p>
-                      <div class="form-wrap">
-                        <label class="form-label form-label-icon" for="date-in"><span class="icon icon-primary fa-calendar"></span><span>Check-in Date</span></label>
-                        <input class="form-input" id="date-in" data-time-picker="date" type="text" name="date in" data-constraints="@Required" required>
-                      </div>
-                    </div>
-                    <div class="cell-lg-12 cell-md-4 cell-sm-6">
-                      <p class="text-uppercase">Departure</p>
-                      <div class="form-wrap">
-                        <label class="form-label form-label-icon" for="date-out"><span class="icon icon-primary fa-calendar"></span><span>Check-out Date</span></label>
-                        <input class="form-input" id="date-out" data-time-picker="date" type="text" name="date out" data-constraints="@Required" required>
-                      </div>
-                    </div>
-                    <div class="cell-lg-6 cell-md-4 cell-xs-6">
-                      <p class="text-uppercase">Adults</p>
-                      <div class="form-wrap form-wrap-validation">
-                        <!--Select 2-->
-                        <select class="form-input select-filter" name="adults" data-constraints="@Required" required>
-                          <option value="" disabled selected>Select</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="cell-lg-6 cell-md-4 cell-xs-6">
-                      <p class="text-uppercase">Children</p>
-                      <div class="form-wrap form-wrap-validation">
-                        <!--Select 2-->
-                        <select class="form-input select-filter" name="children" data-constraints="@Required" required>
-                          <option value="" disabled selected>Select</option>
-                          <option value="0">0</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="cell-lg-12 cell-md-4">
-                      <button class="button button-primary button-square button-block button-effect-ujarak" type="submit"><span>check availability</span></button>                    
-                    </div>
-                    <div id="messageContainer" style="display:none;"></div>
-                  </div>
-                </form>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      <button id="scrollUpBtn" title="Go to top">
-        <img src="images/whatsapp.png" alt="" class="whatup">
-      </button>
-
-      <!-- About us-->
-      <section class="section section-md bg-white text-center text-sm-left">
-        <div class="shell-wide">
-          <div class="range range-50 range-xs-center overflow-hidden">
-            <div class="cell-sm-10 cell-md-8 cell-lg-7 wow fadeInUp" data-wow-delay=".1s">
-              <div class="post-video post-video-border">
-                <div class="post-video__image">
-                  <video id="my-video">
-                    <source src="images/aaa.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            </div>
-            <div class="cell-sm-10 cell-md-8 cell-lg-5 reveal-flex wow fadeInUp" data-wow-delay=".3s">
-              <div class="bg-primary section-wrap-content-var-1">
-                <div class="section-wrap-content-var-1-inner">
-                  <h3>Make It Your Home</h3>
-                  <p>At Super Residence, comfort meets serenity, your perfect home away from home.</p>
-                  <div class="group">
-                  <div class="group">
-                    <dl class="list-desc">
-                      <dt>Weekdays:</dt>
-                      <dd><span>Open 24 hours</span></dd>
-                    </dl>
-                    <dl class="list-desc">
-                      <dt>Weekends:</dt>
-                      <dd><span>Open 24 hours</span></dd>
-                    </dl>
-                  </div><a class="button button-effect-ujarak button-lg button-secondary-outline button-square" href="about-us.html"><span>read more</span></a>
-                </div>
+        <div class="rd-navbar-inner">
+          <!-- RD Navbar Panel-->
+          <div class="rd-navbar-panel">
+            <!-- RD Navbar Toggle-->
+            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+            <!-- RD Navbar collapse toggle-->
+            <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></button>
+            <!-- RD Navbar Brand-->
+            <div class="rd-navbar-brand mobile-brand"><a class="brand-name" href="index.html"><img
+                  src="images/logo-default-314x48.png" alt="" width="314" height="48" /></a></div>
+          </div>
+          <div class="rd-navbar-aside-right">
+            <div class="rd-navbar-nav-wrap">
+              <div class="rd-navbar-nav-scroll-holder">
+                <ul class="rd-navbar-nav">
+                  <li class="active"><a href="index.html">Home</a>
+                  </li>
+                  <li><a href="about-us.html">About Us</a>
+                  </li>
+                  <li><a href="gallery.html">Gallery</a>
+                  </li>
+                  <li><a href="rooms.html">Rooms</a>
+                  </li>
+                  <li><a href="contacts.html">Contacts</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!--Indoor Pool-->
-      <section class="section section-md bg-secondary-4 text-center text-sm-left">
-        <div class="shell">
-          <div class="range range-50 range-md-justify range-sm-middle">
-            <div class="cell-sm-6 cell-md-5">
-              <h3>Hotel Pool</h3>
-              <p>Set in the beautiful countryside of Sri Lanka, Super Residence is a peaceful place to relax and enjoy nature. Our villa offers modern comfort and a quiet escape from the busy world.</p>
-              <p>You can relax by our lovely pool, surrounded by green gardens, or take a refreshing swim. We are close to stunning beaches, so you can enjoy both the pool and the sea. 
-              </p><p>At Super Residence, we work hard to make sure your stay is relaxing and special.</p>
-              <!--a class="button button-primary button button-square button-effect-ujarak button-lg" href="#"><span>read more</span></a-->
+      </nav>
+    </div>
+  </header>
+  <section class="section">
+    <div class="shell-wide">
+      <div class="range range-30 range-xs-center">
+        <div class="cell-lg-8 cell-xl-9">
+          <!-- Classic slider-->
+          <section class="section">
+            <!-- Swiper -->
+            <div class="swiper-container swiper-slider swiper-style-2" data-loop="false" data-autoplay="5500"
+              data-simulate-touch="false" data-slide-effect="slide" data-direction="vertical">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" data-slide-bg="images/slide-01.jpg">
+                  <div class="swiper-slide-caption">
+                    <div class="shell text-sm-left">
+                      <h1 data-caption-animate="slideInDown" data-caption-delay="100">Your Ideal Retreat</h1>
+                      <div class="slider-subtitle-group">
+                        <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
+                        <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Enjoy the world of relaxation
+                        </h4>
+                        <h3 data-caption-animate="slideInLeft" data-caption-delay="800">and tranquility!</h3>
+                      </div>
+                      <!-- Button with higher z-index to remain clickable -->
+                      <a class="button button-effect-ujarak button-lg button-white-outline button-square"
+                        href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn
+                          more</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" data-slide-bg="images/slide-02.jpg">
+                  <div class="swiper-slide-caption">
+                    <div class="shell text-sm-left">
+                      <h1 data-caption-animate="slideInDown" data-caption-delay="100">Relax & Unwind by Our Serene Pool
+                      </h1>
+                      <div class="slider-subtitle-group">
+                        <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
+                        <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Experience the luxurious level
+                        </h4>
+                        <h3 data-caption-animate="slideInLeft" data-caption-delay="800">of our Serene Pool</h3>
+                      </div>
+                      <!-- Button remains clickable -->
+                      <a class="button button-effect-ujarak button-lg button-white-outline button-square"
+                        href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn
+                          more</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" data-slide-bg="images/slide-03.jpg">
+                  <div class="swiper-slide-caption">
+                    <div class="shell text-sm-left">
+                      <h1 data-caption-animate="slideInDown" data-caption-delay="100">Find Your Perfect Escape</h1>
+                      <div class="slider-subtitle-group">
+                        <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
+                        <h3 data-caption-animate="slideInLeft" data-caption-delay="800">Unwind in Quiet Elegance</h3>
+                      </div>
+                      <!-- Button remains clickable -->
+                      <a class="button button-effect-ujarak button-lg button-white-outline button-square"
+                        href="about-us.html" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn
+                          more</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="cell-sm-6">
-              <div class="box-outline box-outline__mod-1">
-                <figure><img src="images/services-05-546x516.jpg" alt="" width="546" height="516"/>
+
+            <style>
+              .swiper-container {
+                pointer-events: none;
+                /* Disables interaction on the swiper */
+              }
+
+              .button {
+                pointer-events: auto;
+                /* Re-enables interaction for buttons */
+                z-index: 10;
+                /* Ensures the button appears on top */
+              }
+            </style>
+
+          </section>
+        </div>
+        <div class="cell-lg-4 cell-xl-3 reveal-lg-flex">
+          <div class="hotel-booking-form">
+            <h3>Book a Room</h3>
+            <!-- RD Mailform-->
+            <form id="myForm" action="https://api.web3forms.com/submit" method="POST">
+              <!-- Replace with your Access Key -->
+              <input type="hidden" name="access_key" value="5c6c3da9-0732-48ee-800f-674a5587259f">
+
+              <div class="range range-sm-bottom spacing-20">
+                <div class="cell-lg-12 cell-md-4">
+                  <p class="text-uppercase">Your Name</p>
+                  <div class="form-wrap">
+                    <input class="form-input" id="contact-first-name" type="text" name="name"
+                      data-constraints="@Required" required>
+                    <label class="form-label" for="contact-first-name">Your Full Name</label>
+                  </div>
+                </div>
+                <div class="cell-lg-12 cell-md-4 cell-sm-6">
+                  <p class="text-uppercase">Arrival</p>
+                  <div class="form-wrap">
+                    <label class="form-label form-label-icon" for="date-in"><span
+                        class="icon icon-primary fa-calendar"></span><span>Check-in Date</span></label>
+                    <input class="form-input" id="date-in" data-time-picker="date" type="text" name="date in"
+                      data-constraints="@Required" required>
+                  </div>
+                </div>
+                <div class="cell-lg-12 cell-md-4 cell-sm-6">
+                  <p class="text-uppercase">Departure</p>
+                  <div class="form-wrap">
+                    <label class="form-label form-label-icon" for="date-out"><span
+                        class="icon icon-primary fa-calendar"></span><span>Check-out Date</span></label>
+                    <input class="form-input" id="date-out" data-time-picker="date" type="text" name="date out"
+                      data-constraints="@Required" required>
+                  </div>
+                </div>
+                <div class="cell-lg-6 cell-md-4 cell-xs-6">
+                  <p class="text-uppercase">Adults</p>
+                  <div class="form-wrap form-wrap-validation">
+                    <!--Select 2-->
+                    <select class="form-input select-filter" name="adults" data-constraints="@Required" required>
+                      <option value="" disabled selected>Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="cell-lg-6 cell-md-4 cell-xs-6">
+                  <p class="text-uppercase">Children</p>
+                  <div class="form-wrap form-wrap-validation">
+                    <!--Select 2-->
+                    <select class="form-input select-filter" name="children" data-constraints="@Required" required>
+                      <option value="" disabled selected>Select</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="cell-lg-12 cell-md-4">
+                  <button class="button button-primary button-square button-block button-effect-ujarak"
+                    type="submit"><span>check availability</span></button>
+                </div>
+                <div id="messageContainer" style="display:none;"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <button id="scrollUpBtn" title="Go to top">
+    <img src="images/whatsapp.png" alt="" class="whatup">
+  </button>
+
+  <!-- About us-->
+  <section class="section section-md bg-white text-center text-sm-left">
+    <div class="shell-wide">
+      <div class="range range-50 range-xs-center overflow-hidden">
+        <div class="cell-sm-10 cell-md-8 cell-lg-7 wow fadeInUp" data-wow-delay=".1s">
+          <div class="post-video post-video-border">
+            <div class="post-video__image">
+              <video id="my-video">
+                <source src="images/aaa.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="cell-sm-10 cell-md-8 cell-lg-5 reveal-flex wow fadeInUp" data-wow-delay=".3s">
+          <div class="bg-primary section-wrap-content-var-1">
+            <div class="section-wrap-content-var-1-inner">
+              <h3>Make It Your Home</h3>
+              <p>At Super Residence, comfort meets serenity, your perfect home away from home.</p>
+              <div class="group">
+                <div class="group">
+                  <dl class="list-desc">
+                    <dt>Weekdays:</dt>
+                    <dd><span>Open 24 hours</span></dd>
+                  </dl>
+                  <dl class="list-desc">
+                    <dt>Weekends:</dt>
+                    <dd><span>Open 24 hours</span></dd>
+                  </dl>
+                </div><a class="button button-effect-ujarak button-lg button-secondary-outline button-square"
+                  href="about-us.html"><span>read more</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!--Indoor Pool-->
+  <section class="section section-md bg-secondary-4 text-center text-sm-left">
+    <div class="shell">
+      <div class="range range-50 range-md-justify range-sm-middle">
+        <div class="cell-sm-6 cell-md-5">
+          <h3>Hotel Pool</h3>
+          <p>Set in the beautiful countryside of Sri Lanka, Super Residence is a peaceful place to relax and enjoy
+            nature. Our villa offers modern comfort and a quiet escape from the busy world.</p>
+          <p>You can relax by our lovely pool, surrounded by green gardens, or take a refreshing swim. We are close to
+            stunning beaches, so you can enjoy both the pool and the sea.
+          </p>
+          <p>At Super Residence, we work hard to make sure your stay is relaxing and special.</p>
+          <!--a class="button button-primary button button-square button-effect-ujarak button-lg" href="#"><span>read more</span></a-->
+        </div>
+        <div class="cell-sm-6">
+          <div class="box-outline box-outline__mod-1">
+            <figure><img src="images/services-05-546x516.jpg" alt="" width="546" height="516" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Restaurant & Dining -->
+  <section class="section section-md bg-white text-center text-sm-left" id="restaurant-section">
+    <div class="shell-wide">
+      <div class="range range-50 range-middle">
+        <div class="cell-lg-6 wow fadeInLeft" data-wow-delay=".1s">
+          <div class="restaurant-content-box">
+            <span class="restaurant-pill-badge">Culinary Experience</span>
+            <h3>Restaurant &amp; Dining</h3>
+            <h5 class="restaurant-lead">Savor authentic Ceylon flavors, ocean-fresh seafood &amp; tropical delicacies.
+            </h5>
+            <p>
+              Immerse your senses in a delightful gastronomic journey at Super Residence. Our in-house dining celebrates
+              the rich culinary heritage of Sri Lanka, pairing aromatic local spices with the freshest catch sourced
+              daily from southern coast fishermen.
+            </p>
+            <p>
+              From wholesome tropical breakfast spreads on the breezy balcony to leisurely poolside snacks and intimate
+              candlelight seafood dinners under the stars, every dish is prepared with passion, freshness, and warm Sri
+              Lankan hospitality.
+            </p>
+
+            <div class="restaurant-highlights-grid">
+              <div class="restaurant-highlight-item">
+                <div class="restaurant-highlight-icon"><span class="icon mdi mdi-fish"></span></div>
+                <div class="restaurant-highlight-body">
+                  <h6>Fresh Seafood</h6>
+                  <p>Locally caught fish, prawns, and crab prepared to your taste.</p>
+                </div>
+              </div>
+              <div class="restaurant-highlight-item">
+                <div class="restaurant-highlight-icon"><span class="icon mdi mdi-silverware-variant"></span></div>
+                <div class="restaurant-highlight-body">
+                  <h6>Ceylon Curries</h6>
+                  <p>Traditional spiced curries made with authentic local herbs.</p>
+                </div>
+              </div>
+              <div class="restaurant-highlight-item">
+                <div class="restaurant-highlight-icon"><span class="icon mdi mdi-coffee"></span></div>
+                <div class="restaurant-highlight-body">
+                  <h6>Tropical Breakfast</h6>
+                  <p>Fresh exotic fruits, juices, eggs, and rich Ceylon tea.</p>
+                </div>
+              </div>
+              <div class="restaurant-highlight-item">
+                <div class="restaurant-highlight-icon"><span class="icon mdi mdi-glass-flute"></span></div>
+                <div class="restaurant-highlight-body">
+                  <h6>Special Celebrations</h6>
+                  <p>Outdoor BBQ evenings and customized dinner setups.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="restaurant-cta-wrap">
+              <a class="button button-primary button-square button-effect-ujarak button-lg"
+                href="gallery.html"><span>View Full Gallery</span></a>
+              <a class="button button-secondary-outline button-square button-effect-ujarak button-lg"
+                href="contacts.html"><span>Contact Us</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cell-lg-6 wow fadeInRight" data-wow-delay=".2s">
+          <div class="restaurant-mosaic-gallery" data-lightgallery="group">
+            <!-- Image 1: Main Dining Hall (Hero landscape) -->
+            <div class="restaurant-mosaic-item item-hero">
+              <a class="restaurant-mosaic-link" href="images/restuarent/r (4).webp" data-size="1280x960"
+                data-lightgallery="item" title="Spacious Dining Hall Interior">
+                <figure>
+                  <img src="images/restuarent/r (4).webp" alt="Super Residence Dining Hall Interior" loading="lazy">
                 </figure>
-              </div>
+                <div class="caption"></div>
+              </a>
+            </div>
+
+            <!-- Image 2: Tropical Breakfast Spread -->
+            <div class="restaurant-mosaic-item item-tall">
+              <a class="restaurant-mosaic-link" href="images/restuarent/r (3).webp" data-size="960x1280"
+                data-lightgallery="item" title="Tropical Breakfast Spread">
+                <figure>
+                  <img src="images/restuarent/r (3).webp" alt="Tropical Breakfast Spread" loading="lazy">
+                </figure>
+                <div class="caption"></div>
+              </a>
+            </div>
+
+            <!-- Image 3: Seafood Dining Experience -->
+            <div class="restaurant-mosaic-item item-small">
+              <a class="restaurant-mosaic-link" href="images/restuarent/r (5).webp" data-size="960x1280"
+                data-lightgallery="item" title="Fresh Seafood Dining Experience">
+                <figure>
+                  <img src="images/restuarent/r (5).webp" alt="Fresh Seafood Feast" loading="lazy">
+                </figure>
+                <div class="caption"></div>
+              </a>
+            </div>
+
+            <!-- Image 4: Family Dining -->
+            <div class="restaurant-mosaic-item item-small">
+              <a class="restaurant-mosaic-link" href="images/restuarent/r (2).webp" data-size="960x1280"
+                data-lightgallery="item" title="Warm Dining Ambiance">
+                <figure>
+                  <img src="images/restuarent/r (2).webp" alt="Warm Dining Atmosphere" loading="lazy">
+                </figure>
+                <div class="caption"></div>
+              </a>
+            </div>
+
+            <!-- Image 5: Evening Celebration -->
+            <div class="restaurant-mosaic-item item-small">
+              <a class="restaurant-mosaic-link" href="images/restuarent/r (6).webp" data-size="960x1280"
+                data-lightgallery="item" title="Evening Balcony Dining &amp; Celebrations">
+                <figure>
+                  <img src="images/restuarent/r (6).webp" alt="Balcony Evening Celebration" loading="lazy">
+                </figure>
+                <div class="caption"></div>
+                <span class="restaurant-more-badge"><span class="icon mdi mdi-camera"></span> +4 Photos</span>
+              </a>
+            </div>
+
+            <!-- Additional Restaurant Images (Accessible in the Lightbox Slide) -->
+            <div class="d-none" style="display: none;">
+              <a href="images/restuarent/r (1).webp" data-size="960x1280" data-lightgallery="item"
+                title="Super Residence Kitchen &amp; Hospitality">
+                <img src="images/restuarent/r (1).webp" alt="Kitchen &amp; Hospitality">
+              </a>
+              <a href="images/restuarent/r (9).webp" data-size="960x1280" data-lightgallery="item"
+                title="Breakfast &amp; Refreshments with Guests">
+                <img src="images/restuarent/r (9).webp" alt="Breakfast with Guests">
+              </a>
+              <a href="images/restuarent/r (7).webp" data-size="960x1280" data-lightgallery="item"
+                title="Gem &amp; Jewelry Boutique Collection">
+                <img src="images/restuarent/r (7).webp" alt="Gem &amp; Jewelry Boutique">
+              </a>
+              <a href="images/restuarent/r (8).webp" data-size="960x1280" data-lightgallery="item"
+                title="Handcrafted Ceylon Gemstone Jewelry">
+                <img src="images/restuarent/r (8).webp" alt="Handcrafted Gemstone Jewelry">
+              </a>
             </div>
           </div>
         </div>
-      </section>
-      <!-- Portfolio-->
-      <section class="section section-md bg-white text-center text-sm-left">
-        <div class="shell-wide">
-          <div class="range range-10 range-middle">
-            <div class="cell-sm-6">
-              <h3>Our Gallery</h3>
-            </div>
-            <div class="cell-sm-6 text-sm-right"><a class="heading-link link-gray-darker" href="gallery.html">See All Photos</a></div>
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio-->
+  <section class="section section-md bg-white text-center text-sm-left">
+    <div class="shell-wide">
+      <div class="range range-10 range-middle">
+        <div class="cell-sm-6">
+          <h3>Our Gallery</h3>
+        </div>
+        <div class="cell-sm-6 text-sm-right"><a class="heading-link link-gray-darker" href="gallery.html">See All
+            Photos</a></div>
+      </div>
+      <hr>
+      <div class="isotope-wrap">
+        <!-- Isotope Content-->
+        <div class="row isotope" data-isotope-layout="masonry" data-isotope-group="gallery" data-lightgallery="group">
+          <div class="col-xs-12 col-sm-6 col-md-3 grid-sizer"></div>
+          <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1"
+            data-wow-delay=".1s"><a class="portfolio-item thumbnail-classic"
+              href="images/gallery-1-533x800_original.jpg" data-size="533x800" data-lightgallery="item"><img
+                src="images/gallery-1-420x584.jpg" alt="" width="420" height="584" />
+              <figure></figure>
+              <div class="caption"></div>
+            </a>
           </div>
-          <hr>
-          <div class="isotope-wrap">
-            <!-- Isotope Content-->
-            <div class="row isotope" data-isotope-layout="masonry" data-isotope-group="gallery" data-lightgallery="group">
-              <div class="col-xs-12 col-sm-6 col-md-3 grid-sizer"></div>
-              <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1" data-wow-delay=".1s"><a class="portfolio-item thumbnail-classic" href="images/gallery-1-533x800_original.jpg" data-size="533x800" data-lightgallery="item"><img src="images/gallery-1-420x584.jpg" alt="" width="420" height="584"/>
-                  <figure></figure>
-                  <div class="caption"></div></a>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1" data-wow-delay=".2s"><a class="portfolio-item thumbnail-classic" href="images/gallery-2-1199x800_original.jpg" data-size="1199x800" data-lightgallery="item"><img src="images/gallery-2-420x278.jpg" alt="" width="420" height="278"/>
-                  <figure></figure>
-                  <div class="caption"></div></a>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1" data-wow-delay=".4s"><a class="portfolio-item thumbnail-classic" href="images/gallery-3-584x800_original.jpg" data-size="584x800" data-lightgallery="item"><img src="images/gallery-3-420x584.jpg" alt="" width="420" height="584"/>
-                  <figure></figure>
-                  <div class="caption"></div></a>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1" data-wow-delay=".5s"><a class="portfolio-item thumbnail-classic" href="images/gallery-4-1200x800_original.jpg" data-size="1200x800" data-lightgallery="item"><img src="images/gallery-4-420x278.jpg" alt="" width="420" height="278"/>
-                  <figure></figure>
-                  <div class="caption"></div></a>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1" data-wow-delay=".3s"><a class="portfolio-item thumbnail-classic" href="images/gallery-5-1200x800_original.jpg" data-size="1200x800" data-lightgallery="item"><img src="images/gallery-5-420x278.jpg" alt="" width="420" height="278"/>
-                  <figure></figure>
-                  <div class="caption"></div></a>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1" data-wow-delay=".6s"><a class="portfolio-item thumbnail-classic" href="images/gallery-6-1200x798_original.jpg" data-size="1200x798" data-lightgallery="item"><img src="images/gallery-6-420x278.jpg" alt="" width="420" height="278"/>
-                  <figure></figure>
-                  <div class="caption"></div></a>
-              </div>
-            </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1"
+            data-wow-delay=".2s"><a class="portfolio-item thumbnail-classic"
+              href="images/gallery-2-1199x800_original.jpg" data-size="1199x800" data-lightgallery="item"><img
+                src="images/gallery-2-420x278.jpg" alt="" width="420" height="278" />
+              <figure></figure>
+              <div class="caption"></div>
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1"
+            data-wow-delay=".4s"><a class="portfolio-item thumbnail-classic"
+              href="images/gallery-3-584x800_original.jpg" data-size="584x800" data-lightgallery="item"><img
+                src="images/gallery-3-420x584.jpg" alt="" width="420" height="584" />
+              <figure></figure>
+              <div class="caption"></div>
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1"
+            data-wow-delay=".5s"><a class="portfolio-item thumbnail-classic"
+              href="images/gallery-4-1200x800_original.jpg" data-size="1200x800" data-lightgallery="item"><img
+                src="images/gallery-4-420x278.jpg" alt="" width="420" height="278" />
+              <figure></figure>
+              <div class="caption"></div>
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1"
+            data-wow-delay=".3s"><a class="portfolio-item thumbnail-classic"
+              href="images/gallery-5-1200x800_original.jpg" data-size="1200x800" data-lightgallery="item"><img
+                src="images/gallery-5-420x278.jpg" alt="" width="420" height="278" />
+              <figure></figure>
+              <div class="caption"></div>
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1"
+            data-wow-delay=".6s"><a class="portfolio-item thumbnail-classic"
+              href="images/gallery-6-1200x798_original.jpg" data-size="1200x798" data-lightgallery="item"><img
+                src="images/gallery-6-420x278.jpg" alt="" width="420" height="278" />
+              <figure></figure>
+              <div class="caption"></div>
+            </a>
           </div>
         </div>
-      </section>
-      <!-- Blog-->
+      </div>
+    </div>
+  </section>
+  <!-- Blog
       <section class="section section-sm bg-white text-center text-sm-left">
         <div class="shell-wide">
           <h3>Offers</h3>
-          <hr>
-          <!-- Owl Carousel-->
-          <div class="owl-carousel owl-carousel-stagePadding" data-items="0" data-dots="false" data-nav="false" data-stage-padding="0" data-lg-stage-padding="100" data-xl-stage-padding="0" data-loop="false" data-margin="30" data-mouse-drag="false" data-nav-class="[&quot;owl-button-prev fl-budicons-free-left161&quot;,&quot;owl-button-next  fl-budicons-free-right163&quot;]">
-            <!--div class="post-box post-box-minimal post-box-horizontal wow fadeInUp" data-wow-delay=".1s"><a class="post-box-image" href="blog-post.html">
+          <hr>-->
+  <!-- Owl Carousel
+          <div class="owl-carousel owl-carousel-stagePadding" data-items="0" data-dots="false" data-nav="false" data-stage-padding="0" data-lg-stage-padding="100" data-xl-stage-padding="0" data-loop="false" data-margin="30" data-mouse-drag="false" data-nav-class="[&quot;owl-button-prev fl-budicons-free-left161&quot;,&quot;owl-button-next  fl-budicons-free-right163&quot;]">-->
+  <!--div class="post-box post-box-minimal post-box-horizontal wow fadeInUp" data-wow-delay=".1s"><a class="post-box-image" href="blog-post.html">
               <figure><img src="images/layout-2-blog-02-460x369.jpg" alt="" width="460" height="369"/>
               </figure></a>  
               <div class="post-box-minimal-caption">
@@ -415,8 +878,8 @@
                 </div>
               </div>
             </div-->
-            
-            
+
+  <!--
             <div class="post-box post-box-minimal post-box-horizontal wow fadeInUp" data-wow-delay=".1s"></div>
                 
               <div id="offer01">
@@ -433,138 +896,148 @@
             </div>
           </div>
         </div>
-      </section>
-      <!-- Page Footer-->
-      <footer class="page-footer text-left text-sm-left">
+      </section>-->
+  <!-- Page Footer-->
+  <footer class="page-footer text-left text-sm-left">
+    <div class="shell-wide">
+
+      <div class="page-footer-minimal">
         <div class="shell-wide">
-          
-          <div class="page-footer-minimal">
-            <div class="shell-wide">
-              <div class="range range-50">
-                <div class="cell-sm-6 cell-md-3 cell-lg-4 wow fadeInUp" data-wow-delay=".1s">
-                  <div class="page-footer-minimal-inner">
-                    <h4>Opening Hours</h4>
-                    <ul class="list-unstyled">
-                      <li>
-                        <div class="group-xs"> 
-                          <div>
-                            <dl class="list-desc">
-                              <dt>Weekdays: </dt>
-                              <dd class="text-gray-darker"><span>Open 24 hours</span></dd>
-                            </dl>
-                          </div>
-                          <div>
-                            <dl class="list-desc">
-                              <dt>Weekends: </dt>
-                              <dd class="text-gray-darker"><span>Open 24 hours</span></dd>
-                            </dl>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <p class="rights"><span>&copy;&nbsp;</span><span>2024</span><span>&nbsp;</span><span class="copyright-year"></span>Super Residence. All Rights Reserved. Design by <a href="https://sitesolv.com/" target="_blank">SiteSolv</a></p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cell-sm-6 cell-md-5 cell-lg-4 wow fadeInUp" data-wow-delay=".2s">
-                  <div class="page-footer-minimal-inner">
-                    <h4>Address</h4>
-                    <ul class="list-unstyled">
-                      <li>
+          <div class="range range-50">
+            <div class="cell-sm-6 cell-md-3 cell-lg-4 wow fadeInUp" data-wow-delay=".1s">
+              <div class="page-footer-minimal-inner">
+                <h4>Opening Hours</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <div class="group-xs">
+                      <div>
                         <dl class="list-desc">
-                          <dt><span class="icon icon-sm mdi mdi-map-marker"></span></dt>
-                          <dd><a class="link link-gray-darker" href="https://www.google.com/maps/place/Superresidence/@6.2550957,80.0408747,18z/data=!4m17!1m7!3m6!1s0x3ae1810e125e0fef:0xf8b6f8eaca725b7d!2sDamnada+College!8m2!3d6.2550778!4d80.0435183!16s%2Fg%2F11c2lrz8qs!3m8!1s0x3ae1814b91c956fb:0xd7c3a3384ebb4b8d!5m2!4m1!1i2!8m2!3d6.2561419!4d80.0421445!16s%2Fg%2F11kskxqbzd?entry=ttu&g_ep=EgoyMDI0MDkwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank"> 35/17 Suchithrarama temple road Walagedara Balapitiya Sri Lanka, 80550 Balapitiya, Sri Lanka</a></dd>
+                          <dt>Weekdays: </dt>
+                          <dd class="text-gray-darker"><span>Open 24 hours</span></dd>
                         </dl>
-                      </li>
-                      <li>
+                      </div>
+                      <div>
                         <dl class="list-desc">
-                          <dt><span class="icon icon-sm mdi mdi-phone"></span></dt>
-                          <dd class="text-gray-darker">Call Us: <a class="link link-gray-darker" href="tel:#">+94 77 191 9523</a>
-                          </dd>
+                          <dt>Weekends: </dt>
+                          <dd class="text-gray-darker"><span>Open 24 hours</span></dd>
                         </dl>
-                      </li>
-                      <li>
-                        <dl class="list-desc">
-                          <dt><span class="icon icon-sm mdi mdi-phone"></span></dt>
-                          <dd class="text-gray-darker">Call Us: <a class="link link-gray-darker" href="tel:#">+94 91 225 2809</a>
-                          </dd>
-                        </dl>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cell-sm-8 cell-md-4 wow fadeInUp" data-wow-delay=".3s">
-                  <div class="page-footer-minimal-inner-subscribe">
-                    <h4>SUPER RESIDENCE VILLA</h4><br>
-                    <a class="button button-primary button button-square button-effect-ujarak button-lg" href="https://www.booking.com/hotel/lk/super-residence-balapitiya.en-gb.html?aid=356980&label=gog235jc-1FmAEJ2AEB-AEMqAID2AIE&sid=d19300e394c936e5a253320133421cfd&dest_id=-2213370;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1726463419;srpvid=fc0e245a81da0021;type=total;ucfs=1&" target="_blank"><span>Book now</span></a>
-                  </div>
-                </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="rights"><span>&copy;&nbsp;</span><span>2024</span><span>&nbsp;</span><span
+                        class="copyright-year"></span>Super Residence. All Rights Reserved. Design by <a
+                        href="https://sitesolv.com/" target="_blank">SiteSolv</a></p>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-    <!-- PANEL-->
-    <!-- END PANEL-->
-    <!-- Global Mailform Output-->
-    <div class="snackbars" id="form-output-global"></div>
-    <!-- PhotoSwipe Gallery-->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="pswp__bg"></div>
-      <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-        <div class="pswp__ui pswp__ui--hidden">
-          <div class="pswp__top-bar">
-            <div class="pswp__counter"></div>
-            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-            <button class="pswp__button pswp__button--share" title="Share"></button>
-            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
-                </div>
+            <div class="cell-sm-6 cell-md-5 cell-lg-4 wow fadeInUp" data-wow-delay=".2s">
+              <div class="page-footer-minimal-inner">
+                <h4>Address</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <dl class="list-desc">
+                      <dt><span class="icon icon-sm mdi mdi-map-marker"></span></dt>
+                      <dd><a class="link link-gray-darker"
+                          href="https://www.google.com/maps/place/Superresidence/@6.2550957,80.0408747,18z/data=!4m17!1m7!3m6!1s0x3ae1810e125e0fef:0xf8b6f8eaca725b7d!2sDamnada+College!8m2!3d6.2550778!4d80.0435183!16s%2Fg%2F11c2lrz8qs!3m8!1s0x3ae1814b91c956fb:0xd7c3a3384ebb4b8d!5m2!4m1!1i2!8m2!3d6.2561419!4d80.0421445!16s%2Fg%2F11kskxqbzd?entry=ttu&g_ep=EgoyMDI0MDkwOC4wIKXMDSoASAFQAw%3D%3D"
+                          target="_blank"> 35/17 Suchithrarama temple road Walagedara Balapitiya Sri Lanka, 80550
+                          Balapitiya, Sri Lanka</a></dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="list-desc">
+                      <dt><span class="icon icon-sm mdi mdi-phone"></span></dt>
+                      <dd class="text-gray-darker">Call Us: <a class="link link-gray-darker" href="tel:#">+94 77 191
+                          9523</a>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="list-desc">
+                      <dt><span class="icon icon-sm mdi mdi-phone"></span></dt>
+                      <dd class="text-gray-darker">Call Us: <a class="link link-gray-darker" href="tel:#">+94 91 225
+                          2809</a>
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-            <div class="pswp__share-tooltip"></div>
-          </div>
-          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-          <div class="pswp__caption">
-            <div class="pswp__caption__cent"></div>
+            <div class="cell-sm-8 cell-md-4 wow fadeInUp" data-wow-delay=".3s">
+              <div class="page-footer-minimal-inner-subscribe">
+                <h4>SUPER RESIDENCE VILLA</h4><br>
+                <a class="button button-primary button button-square button-effect-ujarak button-lg"
+                  href="https://www.booking.com/hotel/lk/super-residence-balapitiya.en-gb.html?aid=356980&label=gog235jc-1FmAEJ2AEB-AEMqAID2AIE&sid=d19300e394c936e5a253320133421cfd&dest_id=-2213370;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1726463419;srpvid=fc0e245a81da0021;type=total;ucfs=1&"
+                  target="_blank"><span>Book now</span></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Javascript-->
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-      document.getElementById('myForm').addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevent the default form submission
-          
-          // Get form values
-          const checkInDate = document.getElementsByName('date in')[0].value;   // Check-in date
-          const checkOutDate = document.getElementsByName('date out')[0].value; // Check-out date
-          const adults = document.getElementsByName('adults')[0].value;         // Number of adults
-          const children = document.getElementsByName('children')[0].value;     // Number of children
-          
-          // Construct the Booking.com URL with form data
-          const bookingURL = `https://www.booking.com/hotel/lk/super-residence-balapitiya.en-gb.html?aid=356980&label=gog235jc-1FmAEJ2AEB-AEMqAID2AIE&sid=d19300e394c936e5a253320133421cfd&group_adults=${encodeURIComponent(adults)}&group_children=${encodeURIComponent(children)}&checkin=${encodeURIComponent(checkInDate)}&checkout=${encodeURIComponent(checkOutDate)}&no_rooms=1&req_adults=${encodeURIComponent(adults)}&req_children=${encodeURIComponent(children)}`;
-          
-          // Redirect to the Booking.com page with the parameters
-          window.location.href = bookingURL;
-      });
-    </script>            
-      
-  </body>
+  </footer>
+  </div>
+  <!-- PANEL-->
+  <!-- END PANEL-->
+  <!-- Global Mailform Output-->
+  <div class="snackbars" id="form-output-global"></div>
+  <!-- PhotoSwipe Gallery-->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__cent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Javascript-->
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get form values
+      const checkInDate = document.getElementsByName('date in')[0].value;   // Check-in date
+      const checkOutDate = document.getElementsByName('date out')[0].value; // Check-out date
+      const adults = document.getElementsByName('adults')[0].value;         // Number of adults
+      const children = document.getElementsByName('children')[0].value;     // Number of children
+
+      // Construct the Booking.com URL with form data
+      const bookingURL = `https://www.booking.com/hotel/lk/super-residence-balapitiya.en-gb.html?aid=356980&label=gog235jc-1FmAEJ2AEB-AEMqAID2AIE&sid=d19300e394c936e5a253320133421cfd&group_adults=${encodeURIComponent(adults)}&group_children=${encodeURIComponent(children)}&checkin=${encodeURIComponent(checkInDate)}&checkout=${encodeURIComponent(checkOutDate)}&no_rooms=1&req_adults=${encodeURIComponent(adults)}&req_children=${encodeURIComponent(children)}`;
+
+      // Redirect to the Booking.com page with the parameters
+      window.location.href = bookingURL;
+    });
+  </script>
+
+</body>
+
 </html>
